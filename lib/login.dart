@@ -19,7 +19,22 @@ class _LoginState extends State<Login> {
       ),
       backgroundColor: Colors.white,
       body: Column(
-        children: [],
+        children: [
+          SizedBox(child: Image.asset("images/login.png")),
+          Text(
+            "Login",
+            style: TextStyle(
+                color: Colors.black, fontFamily: 'Poppins', fontSize: 25),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Text(
+              "By signing, you would be accepting all Google's terms and conditions",
+              style: TextStyle(
+                  color: Colors.black, fontFamily: 'Poppins', fontSize: 15),
+            ),
+          ),
+        ],
       ),
     );
   }

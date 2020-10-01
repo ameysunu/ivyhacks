@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "286689778960",
+    "firebase_url": "https://ivyhacks-594ec.firebaseio.com",
+    "project_id": "ivyhacks-594ec",
+    "storage_bucket": "ivyhacks-594ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286689778960:android:844f402c9e473f06be1995",
+        "android_client_info": {
+          "package_name": "com.example.ivyhacks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286689778960-oa2jeqqrpc6t6k5ufk5n9aomtf14028v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ivyhacks",
+            "certificate_hash": "d99da9f2692d4d5a8eb4626d1a9e78b7a0774db3"
+          }
+        },
+        {
+          "client_id": "286689778960-8r67fopjf2fkdchdjj45m93idh5q758i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW-VxuQi48l46-FN2fre8pMwoZMz1G8o8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286689778960-8r67fopjf2fkdchdjj45m93idh5q758i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

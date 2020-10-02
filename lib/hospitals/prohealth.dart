@@ -35,7 +35,7 @@ class _ProhealthState extends State<Prohealth> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text(
-            "Neutralize",
+            "Testing Centers",
             style: TextStyle(
                 fontFamily: 'Poppins', color: Colors.white, fontSize: 18),
           ),

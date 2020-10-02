@@ -35,7 +35,7 @@ class _ElmhurstState extends State<Elmhurst> {
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text(
-            "Neutralize",
+            "Testing Centers",
             style: TextStyle(
                 fontFamily: 'Poppins', color: Colors.white, fontSize: 18),
           ),

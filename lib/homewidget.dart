@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ivyhacks/centers.dart';
 import 'package:ivyhacks/home.dart';
 
 class HomeWidgte extends StatefulWidget {
@@ -13,6 +14,7 @@ class _HomeWidgteState extends State<HomeWidgte> {
 
   final List<Widget> _widgetOptions = [
     Home(),
+    Centers(),
   ];
 
   Widget build(BuildContext context) {

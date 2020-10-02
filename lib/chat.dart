@@ -83,9 +83,9 @@ class _ChatState extends State<Chat> {
         backgroundColor: Theme.of(context).cardColor,
         centerTitle: true,
         title: new Text(
-          "Food Bot",
+          "HealthBot",
           style: TextStyle(
-              fontFamily: 'Gotham', fontSize: 20, color: Colors.grey[600]),
+              fontFamily: 'Poppins', fontSize: 20, color: Colors.grey[600]),
         ),
       ),
       body: new Column(children: <Widget>[
@@ -138,7 +138,7 @@ class ChatMessage extends StatelessWidget {
                     style: new TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
-                        fontFamily: 'Gotham')),
+                        fontFamily: 'Poppins')),
               ),
               new Container(
                 margin: const EdgeInsets.only(top: 5.0),

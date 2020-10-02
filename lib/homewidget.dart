@@ -19,41 +19,41 @@ class _HomeWidgteState extends State<HomeWidgte> {
     return Scaffold(
       backgroundColor: Colors.purple,
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Hexcolor('#845EC2'),
+          backgroundColor: Hexcolor('#D5CCE6'),
           type: BottomNavigationBarType.fixed,
           currentIndex: _selectedIndex,
           showSelectedLabels: true,
           items: [
             BottomNavigationBarItem(
-              icon: new Icon(Icons.home, color: Hexcolor('#FFF6FF')),
+              icon: new Icon(Icons.home, color: Hexcolor('#494453')),
               title: new Text(
                 'Home',
                 style: TextStyle(
-                    color: Hexcolor('#FFF6FF'), fontFamily: 'Poppins'),
+                    color: Hexcolor('#4B4453'), fontFamily: 'Poppins'),
               ),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.local_hospital, color: Hexcolor('#FFF6FF')),
+              icon: new Icon(Icons.local_hospital, color: Hexcolor('#4B4453')),
               title: new Text(
                 'Centers',
                 style: TextStyle(
-                    color: Hexcolor('#FFF6FF'), fontFamily: 'Poppins'),
+                    color: Hexcolor('#4B4453'), fontFamily: 'Poppins'),
               ),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.chat, color: Hexcolor('#FFF6FF')),
+              icon: new Icon(Icons.chat, color: Hexcolor('#4B4453')),
               title: new Text(
                 'Chat',
                 style: TextStyle(
-                    color: Hexcolor('#FFF6FF'), fontFamily: 'Poppins'),
+                    color: Hexcolor('#4B4453'), fontFamily: 'Poppins'),
               ),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.person_add, color: Hexcolor('#FFF6FF')),
+              icon: new Icon(Icons.person_add, color: Hexcolor('#4B4453')),
               title: new Text(
                 'Therapy',
                 style: TextStyle(
-                    color: Hexcolor('#FFF6FF'), fontFamily: 'Poppins'),
+                    color: Hexcolor('#4B4453'), fontFamily: 'Poppins'),
               ),
             ),
           ],

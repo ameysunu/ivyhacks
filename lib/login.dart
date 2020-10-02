@@ -44,6 +44,10 @@ Future<String> signInWithGoogle() async {
 
     print('signInWithGoogle succeeded: $user');
 
+    if (name.contains(" ")) {
+      name = name.substring(0, name.indexOf(" "));
+    }
+
     return '$user';
   }
 

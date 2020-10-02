@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'hospitals/citymd.dart';
 import 'hospitals/elmhurst.dart';
@@ -43,9 +44,11 @@ class _CentersState extends State<Centers> {
         CameraPosition(zoom: 10, bearing: 30, target: pinPosition);
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Hexcolor('#FFC75F'),
         title: Text(
           'Testing Centers',
-          style: TextStyle(color: Colors.black, fontFamily: 'Poppins'),
+          style: TextStyle(color: Hexcolor('#000000'), fontFamily: 'Poppins'),
         ),
       ),
       body: GoogleMap(
@@ -95,8 +98,11 @@ class _CentersState extends State<Centers> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.black,
-        child: Icon(Icons.map),
+        backgroundColor: Hexcolor('#FFC75F'),
+        child: Icon(
+          Icons.map,
+          color: Colors.black,
+        ),
         onPressed: () {
           setState(() {
             _currentMapType = _currentMapType == MapType.normal

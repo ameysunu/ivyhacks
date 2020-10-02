@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-final firestoreInstance = Firestore.instance;
+final firestoreInstance = FirebaseFirestore.instance;
 final nameController = TextEditingController();
 final ageController = TextEditingController();
 final dateController = TextEditingController();

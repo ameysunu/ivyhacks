@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:ivyhacks/homewidget.dart';
 
 String name;
@@ -66,20 +67,23 @@ class _LoginState extends State<Login> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Hexcolor('#FFFFFF'),
         title: Text(
           "COVID Care",
           style: TextStyle(color: Colors.black, fontFamily: 'Poppins'),
         ),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Hexcolor('#FFFFFF'),
       body: Column(
         children: [
           SizedBox(child: Image.asset("images/login.png")),
-          Text(
-            "Login",
-            style: TextStyle(
-                color: Colors.black, fontFamily: 'Poppins', fontSize: 25),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text(
+              "Login",
+              style: TextStyle(
+                  color: Colors.black, fontFamily: 'Poppins', fontSize: 25),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(10),
@@ -98,8 +102,8 @@ class _LoginState extends State<Login> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: SizedBox(
-                        height: 30,
-                        width: 30,
+                        height: 15,
+                        width: 15,
                         child: Image.asset('images/google.png')),
                   ),
                   Text(

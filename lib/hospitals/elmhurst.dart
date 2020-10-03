@@ -212,10 +212,11 @@ void _popup(BuildContext context) {
       context: context,
       builder: (context) {
         return AlertDialog(
+          backgroundColor: Hexcolor('#008E85'),
           title: Center(
             child: Text(
               "Do you want to confirm your booking?",
-              style: TextStyle(fontFamily: 'Poppins'),
+              style: TextStyle(fontFamily: 'Poppins', color: Colors.white),
             ),
           ),
           content: RaisedButton(

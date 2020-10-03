@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ivyhacks/login.dart';
+import 'package:ivyhacks/symptoms.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
@@ -47,37 +48,45 @@ class _HomeState extends State<Home> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Card(
-                    color: Hexcolor('#FFCFFF'),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Text(
-                            "Symptoms",
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 20,
-                                color: Hexcolor('#40577A')),
+                  child: InkWell(
+                    child: Card(
+                      color: Hexcolor('#FFCFFF'),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Text(
+                              "Symptoms",
+                              style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 20,
+                                  color: Hexcolor('#40577A')),
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding:
-                              const EdgeInsets.only(left: 10.0, bottom: 10),
-                          child: Text(
-                            "Tell us how you be feeling?",
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 15,
-                                color: Hexcolor('#40577A')),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(left: 10.0, bottom: 10),
+                            child: Text(
+                              "Tell us how you be feeling?",
+                              style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 15,
+                                  color: Hexcolor('#40577A')),
+                            ),
                           ),
-                        ),
-                        Row(
-                          children: [],
-                        ),
-                      ],
+                          Row(
+                            children: [],
+                          ),
+                        ],
+                      ),
                     ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Symptoms()),
+                      );
+                    },
                   ),
                 ),
                 Padding(

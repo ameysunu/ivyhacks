@@ -37,7 +37,8 @@ class _HomeWidgteState extends State<HomeWidgte> {
               ),
             ),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.local_hospital, color: Hexcolor('#4B4453')),
+              icon: new Icon(Icons.local_hospital_rounded,
+                  color: Hexcolor('#4B4453')),
               title: new Text(
                 'Centers',
                 style: TextStyle(

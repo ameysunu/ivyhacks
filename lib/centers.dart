@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -6,6 +8,12 @@ import 'package:url_launcher/url_launcher.dart';
 import 'hospitals/citymd.dart';
 import 'hospitals/elmhurst.dart';
 import 'hospitals/prohealth.dart';
+
+final firestoreInstance = FirebaseFirestore.instance;
+Future<DocumentSnapshot> getUserInfo() async {
+  var firebaseUser = await FirebaseAuth.instance.currentUser;
+  return await FirebaseFirestore.instance.doc('users/booking').get();
+}
 
 class Centers extends StatefulWidget {
   @override
@@ -50,7 +58,9 @@ class _CentersState extends State<Centers> {
                 Icons.info,
                 color: Colors.black,
               ),
-              onPressed: null)
+              onPressed: () {
+                null;
+              })
         ],
         automaticallyImplyLeading: false,
         backgroundColor: Hexcolor('#FFC75F'),

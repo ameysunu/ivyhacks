@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ivyhacks/login.dart';
 
 final firestoreInstance = FirebaseFirestore.instance;
 
@@ -37,6 +38,47 @@ class _MyListState extends State<MyList> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Card(
+              color: Hexcolor('#FFE9E2'),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      child: CircleAvatar(
+                          backgroundColor: Hexcolor('#FFE9E2'),
+                          child: Image.network(imageUrl)),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10.0),
+                          child: Text(
+                            name,
+                            style:
+                                TextStyle(fontFamily: 'Poppins', fontSize: 15),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10.0),
+                          child: Text(
+                            email,
+                            style:
+                                TextStyle(fontFamily: 'Poppins', fontSize: 15),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
           StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance.collection("users").snapshots(),
             builder:

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
-import 'package:ivyhacks/home.dart';
+import 'package:ivyhacks/homewidget.dart';
 
 class MedCheck extends StatelessWidget {
   @override
@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) {
-                return Home();
+                return HomeWidgte();
               },
             ),
           );
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 "Prescription Scan",
-                style: TextStyle(fontFamily: 'Gotham', fontSize: 20),
+                style: TextStyle(fontFamily: 'Poppins', fontSize: 20),
               ),
             ),
             SizedBox(height: 30.0),
@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
             text == ''
                 ? Text(
                     'Tap and find out your prescriptions.',
-                    style: TextStyle(fontFamily: 'Gotham'),
+                    style: TextStyle(fontFamily: 'Poppins'),
                   )
                 : Expanded(
                     child: SingleChildScrollView(
@@ -124,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         padding: const EdgeInsets.all(15.0),
                         child: SelectableText(
                           text,
-                          style: TextStyle(fontFamily: 'Gotham'),
+                          style: TextStyle(fontFamily: 'Poppins'),
                         ),
                       ),
                     ),

@@ -47,5 +47,9 @@
             <meta-data 
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCW-VxuQi48l46-FN2fre8pMwoZMz1G8o8"/>
+            
+             <meta-data
+        android:name="com.google.firebase.ml.vision.DEPENDENCIES"
+        android:value="ocr,text" />
     </application>
 </manifest>

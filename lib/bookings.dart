@@ -5,6 +5,10 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:ivyhacks/login.dart';
 
 final firestoreInstance = FirebaseFirestore.instance;
+Future<DocumentSnapshot> getUserInfo() async {
+  var firebaseUser = await FirebaseAuth.instance.currentUser;
+  return await FirebaseFirestore.instance.doc('users/booking').get();
+}
 
 class Bookings extends StatelessWidget {
   @override
@@ -79,44 +83,42 @@ class _MyListState extends State<MyList> {
               ),
             ),
           ),
-          StreamBuilder<QuerySnapshot>(
-            stream: FirebaseFirestore.instance.collection("users").snapshots(),
-            builder:
-                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-              if (snapshot.hasError) return new Text('${snapshot.error}');
-              switch (snapshot.connectionState) {
-                case ConnectionState.none:
-                case ConnectionState.waiting:
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                case ConnectionState.active:
-                case ConnectionState.done:
-                  if (snapshot.hasError)
-                    return Center(child: Text('Error: ${snapshot.error}'));
-                  if (!snapshot.hasData) return Text('No data found!');
-                  return SingleChildScrollView(
-                    child: Column(
-                        children:
-                            snapshot.data.docs.map((DocumentSnapshot document) {
-                      return Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: new Text(
-                          "Name: " +
-                              document['name'] +
-                              "\nAge: " +
-                              document['age'] +
-                              "\nDate: " +
-                              document['date'] +
-                              "\nHospital: " +
-                              document['hospital'],
-                          style: TextStyle(fontFamily: 'Poppins', fontSize: 15),
-                        ),
-                      );
-                    }).toList()),
-                  );
-              }
-            },
+          Card(
+            elevation: 0,
+            color: Hexcolor('#FFC75F'),
+            child: Container(
+              child: FutureBuilder(
+                future: getUserInfo(),
+                builder: (context, AsyncSnapshot<DocumentSnapshot> snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done) {
+                    return ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: 1,
+                        itemBuilder: (BuildContext context, int index) {
+                          return ListTile(
+                            title: Text(
+                              "Name:\n" +
+                                  snapshot.data.data()['name'] +
+                                  "\n\nAge:\n" +
+                                  snapshot.data.data()['age'] +
+                                  "\n\nDate:\n" +
+                                  snapshot.data.data()['date'] +
+                                  "\n\nHospital:\n" +
+                                  snapshot.data.data()['hospital'],
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 16),
+                            ),
+                          );
+                        });
+                  } else if (snapshot.connectionState == ConnectionState.none) {
+                    return Text("No data");
+                  }
+                  return CircularProgressIndicator();
+                },
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(10.0),

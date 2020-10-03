@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:ivyhacks/bookings.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'hospitals/citymd.dart';
 import 'hospitals/elmhurst.dart';
@@ -59,7 +60,10 @@ class _CentersState extends State<Centers> {
                 color: Colors.black,
               ),
               onPressed: () {
-                null;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Bookings()),
+                );
               })
         ],
         automaticallyImplyLeading: false,

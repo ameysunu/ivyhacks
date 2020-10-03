@@ -12,11 +12,11 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Hexcolor('#FFFFFF'),
+      backgroundColor: Hexcolor('#FFE8F7'),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
-        backgroundColor: Hexcolor('#FFFFFFF'),
+        backgroundColor: Hexcolor('#FFE8F7'),
         title: Text(
           "Welcome $name",
           style: TextStyle(color: Colors.black, fontFamily: 'Poppins'),
@@ -102,6 +102,41 @@ class _HomeState extends State<Home> {
                               const EdgeInsets.only(left: 10.0, bottom: 10),
                           child: Text(
                             "Check your medicines, if you don't trust them.",
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 15,
+                                color: Hexcolor('#40577A')),
+                          ),
+                        ),
+                        Row(
+                          children: [],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Card(
+                    color: Hexcolor('#FFE694'),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text(
+                            "Global Pandemic",
+                            style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 20,
+                                color: Hexcolor('#40577A')),
+                          ),
+                        ),
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(left: 10.0, bottom: 10),
+                          child: Text(
+                            "Total Cases:  34.7 million",
                             style: TextStyle(
                                 fontFamily: 'Poppins',
                                 fontSize: 15,

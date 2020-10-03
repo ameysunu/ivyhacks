@@ -1,6 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+final firestoreInstance = FirebaseFirestore.instance;
 
 class Bookings extends StatelessWidget {
   @override
@@ -32,6 +35,7 @@ class _MyListState extends State<MyList> {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           StreamBuilder<QuerySnapshot>(
             stream: FirebaseFirestore.instance.collection("users").snapshots(),
@@ -72,8 +76,39 @@ class _MyListState extends State<MyList> {
               }
             },
           ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: RaisedButton(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Delete Booking",
+                    style: TextStyle(fontFamily: 'Poppins'),
+                  ),
+                ],
+              ),
+              onPressed: () {
+                deleteRecord();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Bookings()),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
   }
+}
+
+void deleteRecord() async {
+  var firebaseUser = await FirebaseAuth.instance.currentUser;
+  firestoreInstance
+      .collection("users")
+      .doc('booking')
+      .update({"name": "", "age": "", "date": "", "hospital": ""}).then((_) {
+    print("success!");
+  });
 }

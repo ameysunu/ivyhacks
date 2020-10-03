@@ -12,15 +12,26 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Hexcolor('#F8D1B9'),
+      backgroundColor: Hexcolor('#FFFFFF'),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         elevation: 0,
-        backgroundColor: Hexcolor('#F8D1B9'),
+        backgroundColor: Hexcolor('#FFFFFFF'),
         title: Text(
           "Welcome $name",
           style: TextStyle(color: Colors.black, fontFamily: 'Poppins'),
         ),
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.logout,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                signOutGoogle();
+                Navigator.pop(context);
+              })
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(

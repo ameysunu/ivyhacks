@@ -44,6 +44,14 @@ class _CentersState extends State<Centers> {
         CameraPosition(zoom: 10, bearing: 30, target: pinPosition);
     return Scaffold(
       appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.info,
+                color: Colors.black,
+              ),
+              onPressed: null)
+        ],
         automaticallyImplyLeading: false,
         backgroundColor: Hexcolor('#FFC75F'),
         title: Text(

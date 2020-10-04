@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ivyhacks/therapists/page1.dart';
 import 'package:ivyhacks/therapists/page3.dart';
+import 'package:ivyhacks/therapybot.dart';
 
 import 'therapists/page2.dart';
 
@@ -15,6 +16,19 @@ class _TherapyState extends State<Therapy> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(
+                Icons.chat_bubble_outline,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TherapyChat()),
+                );
+              }),
+        ],
         elevation: 0,
         backgroundColor: Hexcolor('#DCB0FF'),
         automaticallyImplyLeading: false,

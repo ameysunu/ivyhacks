@@ -5,7 +5,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-String mobile = '+1(306)112567';
+String mobile = '+1(509)126432';
 
 class ThirdPage extends StatefulWidget {
   @override
@@ -29,9 +29,9 @@ class _ThirdPageState extends State<ThirdPage> {
 
   @override
   Widget build(BuildContext context) {
-    LatLng pinPosition = LatLng(37.347016, -121.876966);
+    LatLng pinPosition = LatLng(30.346687, -97.651901);
 
-    String positionOne = "John Stinson";
+    String positionOne = "Anna Stephens";
 
     CameraPosition initialLocation =
         CameraPosition(zoom: 10, bearing: 30, target: pinPosition);
@@ -39,13 +39,13 @@ class _ThirdPageState extends State<ThirdPage> {
       appBar: AppBar(
         elevation: 0,
         automaticallyImplyLeading: false,
-        backgroundColor: Hexcolor('#FFACC0'),
+        backgroundColor: Hexcolor('#F9F871'),
         title: Text(
           "Therapists",
           style: TextStyle(fontFamily: 'Poppins', color: Hexcolor('#54433A')),
         ),
       ),
-      backgroundColor: Hexcolor('#FFACC0'),
+      backgroundColor: Hexcolor('#F9F871'),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
@@ -70,11 +70,11 @@ class _ThirdPageState extends State<ThirdPage> {
                         _controller.complete(controller);
                         setState(() {
                           _markers.add(Marker(
-                              markerId: MarkerId("John Stinson"),
+                              markerId: MarkerId("Anna Stephens"),
                               position: pinPosition,
                               infoWindow: InfoWindow(
                                 title: positionOne,
-                                snippet: 'Mental Health',
+                                snippet: 'Psychatrist',
                               ),
                               icon: pinLocationIcon));
                         });
@@ -87,7 +87,7 @@ class _ThirdPageState extends State<ThirdPage> {
                   color: Colors.transparent,
                   child: Container(
                       decoration: new BoxDecoration(
-                          color: Hexcolor('#3E5381'),
+                          color: Hexcolor('#FFE7D3'),
                           borderRadius: new BorderRadius.only(
                             topLeft: const Radius.circular(40.0),
                             topRight: const Radius.circular(40.0),
@@ -102,15 +102,15 @@ class _ThirdPageState extends State<ThirdPage> {
                                   height: 100,
                                   width: 100,
                                   child: Image.network(
-                                      "https://i.ibb.co/cvSfmqD/toppng-com-jpg-freeuse-library-user-computer-software-flat-man-user-flat-2610x2864.png"),
+                                      "https://i.ibb.co/ky2dZhS/wamen.png"),
                                 ),
                               ),
                               Text(
-                                "John Stinson",
+                                "Anna Stephens",
                                 style: TextStyle(
                                     fontFamily: 'Poppins',
                                     fontSize: 20,
-                                    color: Hexcolor('#FFFFFF')),
+                                    color: Hexcolor('#000000')),
                               ),
                             ],
                           ),
@@ -190,7 +190,7 @@ class _ThirdPageState extends State<ThirdPage> {
 void _email() async {
   final Uri params = Uri(
     scheme: 'mailto',
-    path: 'stinson78@example.com',
+    path: 'anna78@example.com',
   );
   String url = params.toString();
   if (await canLaunch(url)) {

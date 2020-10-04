@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ivyhacks/therapists/page1.dart';
 
+import 'therapists/page2.dart';
+
 class Therapy extends StatefulWidget {
   @override
   _TherapyState createState() => _TherapyState();
@@ -124,13 +126,22 @@ class _TherapyState extends State<Therapy> {
                             Container(
                               height: 300,
                               width: 250,
-                              child: Card(
-                                color: Hexcolor('#FFACC0'),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
+                              child: InkWell(
+                                child: Card(
+                                  color: Hexcolor('#FFACC0'),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Image.network(
+                                      "https://i.ibb.co/cvSfmqD/toppng-com-jpg-freeuse-library-user-computer-software-flat-man-user-flat-2610x2864.png"),
                                 ),
-                                child: Image.network(
-                                    "https://i.ibb.co/cvSfmqD/toppng-com-jpg-freeuse-library-user-computer-software-flat-man-user-flat-2610x2864.png"),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => SecondPage()),
+                                  );
+                                },
                               ),
                             ),
                             Padding(

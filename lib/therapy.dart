@@ -21,7 +21,15 @@ class _TherapyState extends State<Therapy> {
       ),
       backgroundColor: Hexcolor('#DCB0FF'),
       body: Column(
-        children: [],
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text(
+              "This pandemic, can be a little frustrating and you might have tons of stuff in your head right now. Get in touch with our best therapists.",
+              style: TextStyle(fontFamily: 'Poppins', color: Colors.black54),
+            ),
+          ),
+        ],
       ),
     );
   }

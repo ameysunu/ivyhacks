@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ivyhacks/therapists/page1.dart';
+import 'package:ivyhacks/therapists/page3.dart';
 
 import 'therapists/page2.dart';
 
@@ -187,13 +188,22 @@ class _TherapyState extends State<Therapy> {
                             Container(
                               height: 300,
                               width: 250,
-                              child: Card(
-                                color: Hexcolor('#F9F871'),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
+                              child: InkWell(
+                                child: Card(
+                                  color: Hexcolor('#F9F871'),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Image.network(
+                                      "https://i.ibb.co/ky2dZhS/wamen.png"),
                                 ),
-                                child: Image.network(
-                                    "https://i.ibb.co/ky2dZhS/wamen.png"),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ThirdPage()),
+                                  );
+                                },
                               ),
                             ),
                             Padding(

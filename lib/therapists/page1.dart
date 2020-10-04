@@ -3,6 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+String mobile = '+1(203)334556';
 
 class FirstPage extends StatefulWidget {
   @override
@@ -117,40 +120,58 @@ class _FirstPageState extends State<FirstPage> {
                               Padding(
                                 padding: const EdgeInsets.all(10.0),
                                 child: RaisedButton(
+                                    color: Hexcolor('#7B5298'),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Icon(Icons.call),
+                                          child: Icon(Icons.call,
+                                              color: Colors.white),
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Text("Call Me"),
+                                          child: Text(
+                                            "Call Me",
+                                            style: TextStyle(
+                                                fontFamily: 'Poppins',
+                                                color: Colors.white),
+                                          ),
                                         ),
                                       ],
                                     ),
-                                    onPressed: null),
+                                    onPressed: () {
+                                      launch(('tel://$mobile'));
+                                    }),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(10.0),
                                 child: RaisedButton(
+                                    color: Hexcolor('#7B5298'),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Icon(Icons.email),
+                                          child: Icon(Icons.email,
+                                              color: Colors.white),
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
-                                          child: Text("Email"),
+                                          child: Text(
+                                            "Email",
+                                            style: TextStyle(
+                                                fontFamily: 'Poppins',
+                                                color: Colors.white),
+                                          ),
                                         ),
                                       ],
                                     ),
-                                    onPressed: null),
+                                    onPressed: () {
+                                      _email();
+                                    }),
                               ),
                             ],
                           ),
@@ -163,5 +184,18 @@ class _FirstPageState extends State<FirstPage> {
         ),
       ),
     );
+  }
+}
+
+void _email() async {
+  final Uri params = Uri(
+    scheme: 'mailto',
+    path: 'norma.warren@example.com',
+  );
+  String url = params.toString();
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    print('Could not launch $url');
   }
 }

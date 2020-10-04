@@ -45,159 +45,161 @@ class _TherapyState extends State<Therapy> {
               padding: const EdgeInsets.all(10.0),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 300,
-                          width: 250,
-                          child: Card(
-                            color: Hexcolor('#FFBD95'),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
-                            ),
-                            child: Image.network(
-                                "https://i.ibb.co/pwd7tyv/femaleava.png"),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10.0, left: 10),
-                          child: Text(
-                            "Norma Warren",
-                            style:
-                                TextStyle(fontFamily: 'Poppins', fontSize: 20),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5.0, left: 10),
-                          child: Text(
-                            "Gestalt-Therapy | 7 years",
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 15,
-                                color: Colors.black54),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              top: 5.0, left: 10, right: 10),
-                          child: SizedBox(
-                            height: 150,
+                child: Container(
+                  child: Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 300,
                             width: 250,
+                            child: Card(
+                              color: Hexcolor('#FFBD95'),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              child: Image.network(
+                                  "https://i.ibb.co/pwd7tyv/femaleava.png"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10.0, left: 10),
                             child: Text(
-                              "Norma is a graduate from John Hopkins and has been working as a therapist since 2013. She would help you resolve any sorts of depression, stress,isolation and any such oppressed issue.",
+                              "Norma Warren",
+                              style: TextStyle(
+                                  fontFamily: 'Poppins', fontSize: 20),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5.0, left: 10),
+                            child: Text(
+                              "Gestalt-Therapy | 7 years",
                               style: TextStyle(
                                   fontFamily: 'Poppins',
                                   fontSize: 15,
                                   color: Colors.black54),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 300,
-                          width: 250,
-                          child: Card(
-                            color: Hexcolor('#FFBD95'),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                top: 5.0, left: 10, right: 10),
+                            child: SizedBox(
+                              height: 150,
+                              width: 250,
+                              child: Text(
+                                "Norma is a graduate from John Hopkins and has been working as a therapist since 2013. She would help you resolve any sorts of depression, stress,isolation and any such oppressed issue.",
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 15,
+                                    color: Colors.black54),
+                              ),
                             ),
-                            child: Image.network(
-                                "https://i.ibb.co/pwd7tyv/femaleava.png"),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10.0, left: 10),
-                          child: Text(
-                            "Norma Warren",
-                            style:
-                                TextStyle(fontFamily: 'Poppins', fontSize: 20),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5.0, left: 10),
-                          child: Text(
-                            "Gestalt-Therapy | 7 years",
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 15,
-                                color: Colors.black54),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              top: 5.0, left: 10, right: 10),
-                          child: SizedBox(
-                            height: 150,
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 300,
                             width: 250,
+                            child: Card(
+                              color: Hexcolor('#FFACC0'),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              child: Image.network(
+                                  "https://i.ibb.co/cvSfmqD/toppng-com-jpg-freeuse-library-user-computer-software-flat-man-user-flat-2610x2864.png"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10.0, left: 10),
                             child: Text(
-                              "Norma is a graduate from John Hopkins and has been working as a therapist since 2013. She would help you resolve any sorts of depression, stress,isolation and any such oppressed issue.",
+                              "John Stinson",
+                              style: TextStyle(
+                                  fontFamily: 'Poppins', fontSize: 20),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5.0, left: 10),
+                            child: Text(
+                              "Mental Health | 2 years",
                               style: TextStyle(
                                   fontFamily: 'Poppins',
                                   fontSize: 15,
                                   color: Colors.black54),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 300,
-                          width: 250,
-                          child: Card(
-                            color: Hexcolor('#FFBD95'),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                top: 5.0, left: 10, right: 10),
+                            child: SizedBox(
+                              height: 150,
+                              width: 250,
+                              child: Text(
+                                "John is an extraordinary graduate from University of Mental Sciences and is in the field since 2018. He would help you talk out your anxiety, fear and any such mental factors.",
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 15,
+                                    color: Colors.black54),
+                              ),
                             ),
-                            child: Image.network(
-                                "https://i.ibb.co/pwd7tyv/femaleava.png"),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10.0, left: 10),
-                          child: Text(
-                            "Norma Warren",
-                            style:
-                                TextStyle(fontFamily: 'Poppins', fontSize: 20),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 5.0, left: 10),
-                          child: Text(
-                            "Gestalt-Therapy | 7 years",
-                            style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 15,
-                                color: Colors.black54),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              top: 5.0, left: 10, right: 10),
-                          child: SizedBox(
-                            height: 150,
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 300,
                             width: 250,
+                            child: Card(
+                              color: Hexcolor('#F9F871'),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              child: Image.network(
+                                  "https://i.ibb.co/ky2dZhS/wamen.png"),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10.0, left: 10),
                             child: Text(
-                              "Norma is a graduate from John Hopkins and has been working as a therapist since 2013. She would help you resolve any sorts of depression, stress,isolation and any such oppressed issue.",
+                              "Anna Stephens",
+                              style: TextStyle(
+                                  fontFamily: 'Poppins', fontSize: 20),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5.0, left: 10),
+                            child: Text(
+                              "Psychiatrist | 4 years",
                               style: TextStyle(
                                   fontFamily: 'Poppins',
                                   fontSize: 15,
                                   color: Colors.black54),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                top: 5.0, left: 10, right: 10),
+                            child: SizedBox(
+                              height: 150,
+                              width: 250,
+                              child: Text(
+                                "Anna is also a graduate from John Hopkins and a brilliant psychiatrist. She would help you resolve any sorts of mental stress, recommend psychotherapies to relax.",
+                                style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 15,
+                                    color: Colors.black54),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

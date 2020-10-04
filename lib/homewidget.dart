@@ -3,6 +3,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:ivyhacks/centers.dart';
 import 'package:ivyhacks/chat.dart';
 import 'package:ivyhacks/home.dart';
+import 'package:ivyhacks/therapy.dart';
 
 class HomeWidgte extends StatefulWidget {
   @override
@@ -17,6 +18,7 @@ class _HomeWidgteState extends State<HomeWidgte> {
     Home(),
     Centers(),
     Chat(),
+    Therapy(),
   ];
 
   Widget build(BuildContext context) {

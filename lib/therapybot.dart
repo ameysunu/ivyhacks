@@ -47,7 +47,7 @@ class _TherapyChatState extends State<TherapyChat> {
   void Response(query) async {
     _textController.clear();
     AuthGoogle authGoogle =
-        await AuthGoogle(fileJson: "assets/ivyhacks-iytt-a984e97ac0e5.json")
+        await AuthGoogle(fileJson: "assets/therapybot-pnvg-9f496da9bf60.json")
             .build();
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);

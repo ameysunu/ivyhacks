@@ -3,8 +3,8 @@ jobs:
   build:
     docker:
       - image: cirrusci/flutter
-      steps: 
-       - checkout
-        - run: flutter doctor
-        - run: flutter test 
-        - run: flutter -v build apk
+    steps:
+      - checkout
+      - run: flutter doctor
+      - run: flutter test 
+      - run: flutter -v build apk

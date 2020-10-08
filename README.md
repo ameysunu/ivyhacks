@@ -1,5 +1,7 @@
 # ivyhacks
 
+[![Build Status](https://dev.azure.com/ameypsunu2017/COVID%20Care/_apis/build/status/ameysunu.ivyhacks?branchName=master)](https://dev.azure.com/ameypsunu2017/COVID%20Care/_build/latest?definitionId=12&branchName=master)
+
 A new Flutter project.
 
 ## Getting Started
